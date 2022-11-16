@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StudentInputFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/item_id_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="Student Id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idTextField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textAutoComplete|textCapWords"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/item_name_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Student Name"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_id_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameTextField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textAutoComplete|textCapWords"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_name_label"
+        tools:text="Save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
